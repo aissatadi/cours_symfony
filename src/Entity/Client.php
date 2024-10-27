@@ -94,10 +94,7 @@ class Client
     /**
      * @return Collection<int, Dette>
      */
-    public function getDettes(): Collection
-    {
-        return $this->dettes;
-    }
+    
 
     public function addDette(Dette $dette): static
     {
@@ -119,5 +116,14 @@ class Client
         }
 
         return $this;
+    }
+
+    
+    /**
+     * @return Collection|Debt[]
+     */
+    public function getDettes(): Collection // Méthode pour récupérer les dettes
+    {
+        return $this->dettes;
     }
 }
